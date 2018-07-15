@@ -1,74 +1,66 @@
-2018-07-14 16:09:10.780 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?, ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:25:15.708 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?, ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:30:23.445 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:31:44.962 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:37:46.216 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:46:10.348 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:46:10.427 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'useId' in 'class com.hyz.o2o.entity.PersonInfo'
-2018-07-14 16:47:55.807 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,? ) 
-2018-07-14 16:47:55.881 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 16:47:55.326(Timestamp), null, 1(Integer), 审核中(String)
-2018-07-14 16:47:56.012 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO   tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority,   create_time,last_edit_time,enable_status,advice)   VALUES   (?,?,?,?,?   ?,?,?,?,?,?,   ?,?   )
-### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
-2018-07-14 16:52:57.644 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,?) 
-2018-07-14 16:52:57.724 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 16:52:57.145(Timestamp), null, 1(Integer), 审核中(String)
-2018-07-14 16:52:57.831 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO   tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority,   create_time,last_edit_time,enable_status,advice)   VALUES   (?,?,?,?,?   ?,?,?,?,?,?,   ?,?)
-### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
-2018-07-14 16:56:45.880 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?,?,? ?,?,?,?,?,?, ?,?) 
-2018-07-14 16:56:45.949 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 16:56:45.398(Timestamp), 2018-07-14 16:56:45.398(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 16:56:46.075 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO   tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,phone,shop_img,priority,   create_time,last_edit_time,enable_status,advice)   VALUES   (?,?,?,?,?   ?,?,?,?,?,?,   ?,?)
-### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
-2018-07-14 17:05:22.946 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ? ?, ?, ?, ?, ?, ?, ?, ?); 
-2018-07-14 17:05:23.023 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 17:05:22.286(Timestamp), 2018-07-14 17:05:22.286(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 17:05:23.166 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO   tb_shop(owner_id, area_id,   shop_category_id, shop_name, shop_desc,   shop_addr, phone, shop_img,   priority,   create_time, last_edit_time, enable_status, advice)   VALUES   (?, ?, ?,   ?, ?   ?, ?, ?,   ?,   ?, ?, ?,   ?);
-### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
-; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
-2018-07-14 17:11:28.785 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ? ?, ?, ?, ?, ?, ?, ?, ?); 
-2018-07-14 17:11:28.850 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 17:11:28.282(Timestamp), 2018-07-14 17:11:28.282(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 17:22:41.472 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ? ?, ?, ?, ?, ?, ?, ?, ?); 
-2018-07-14 17:22:41.537 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 17:22:41.003(Timestamp), 2018-07-14 17:22:41.003(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 17:27:35.079 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id,shop_category_id, shop_name, shop_desc,shop_addr, phone, shop_img, priority,create_time, last_edit_time, enable_status, advice) VALUES (1,1,1,'test','test','test','test','test',1,null,null,1,'nothing'); 
-2018-07-14 17:27:35.133 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 
-2018-07-14 17:27:35.156 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-14 20:18:53.380 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ? ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-07-14 20:18:53.445 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 20:18:52.742(Timestamp), 2018-07-14 20:18:52.742(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 20:50:24.176 [main] DEBUG com.hyz.o2o.dao.AreaDao.insertArea - ==>  Preparing: INSERT INTO tb_area (area_name. priority,create_time,last_edit_time) VALUES (?,?,?,?) 
-2018-07-14 20:54:34.823 [main] DEBUG com.hyz.o2o.dao.AreaDao.insertArea - ==>  Preparing: INSERT INTO tb_area (area_name. priority,create_time,last_edit_time) VALUES (?,?,?,?) 
-2018-07-14 20:54:34.879 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'LastEditTime' in 'class com.hyz.o2o.entity.Area'
-2018-07-14 20:55:34.518 [main] DEBUG com.hyz.o2o.dao.AreaDao.insertArea - ==>  Preparing: INSERT INTO tb_area (area_name. priority,create_time,last_edit_time) VALUES (?,?,?,?) 
-2018-07-14 20:55:34.577 [main] DEBUG com.hyz.o2o.dao.AreaDao.insertArea - ==> Parameters: 南苑(String), 1(Integer), 2018-07-14 20:55:34.033(Timestamp), null
-2018-07-14 20:55:34.715 [main] DEBUG com.hyz.o2o.web.superadmin.AreaController - org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'area_name.priority' in 'field list'
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO    tb_area   (area_name. priority,create_time,last_edit_time)   VALUES   (?,?,?,?)
-### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'area_name.priority' in 'field list'
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'area_name.priority' in 'field list'
-2018-07-14 20:57:56.319 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ? ?, ?, ?, ?, ?, ?, ?, ? 
-2018-07-14 20:57:56.427 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 20:57:55.605(Timestamp), 2018-07-14 20:57:55.605(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 21:01:09.845 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? 
-2018-07-14 21:01:09.944 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 21:01:09.19(Timestamp), 2018-07-14 21:01:09.19(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 21:03:34.102 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-07-14 21:03:34.162 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-07-14 21:03:33.623(Timestamp), 2018-07-14 21:03:33.623(Timestamp), 1(Integer), 审核中(String)
-2018-07-14 21:03:34.227 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-07-14 22:14:32.602 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, last_edit_time=?, advice=? where shop_id=? 
-2018-07-14 22:14:32.665 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺(String), 测试的店铺(String), 测试的店铺(String), 2018-07-14 22:14:32.042(Timestamp), 审核通过(String), 5(Long)
-2018-07-14 22:14:32.767 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 10:56:42.998 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 10:56:43.066 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), test1(String), null, 2018-07-15 10:56:42.963(Timestamp), 2018-07-15 10:56:42.963(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 10:56:43.070 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 10:59:00.238 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 10:59:00.289 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, null, 2018-07-15 10:59:00.205(Timestamp), 2018-07-15 10:59:00.205(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 10:59:00.292 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 11:00:22.131 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 11:00:22.179 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, 1(Integer), 2018-07-15 11:00:22.097(Timestamp), 2018-07-15 11:00:22.097(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 11:00:22.182 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 11:03:52.720 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 11:03:52.766 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, 1(Integer), 2018-07-15 11:03:52.689(Timestamp), 2018-07-15 11:03:52.689(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 11:03:52.768 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 11:05:45.308 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 11:05:45.368 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, 1(Integer), 2018-07-15 11:05:45.275(Timestamp), 2018-07-15 11:05:45.275(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 11:05:45.371 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 11:05:45.456 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, priority=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 11:05:45.457 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), 1(Integer), 2018-07-15 11:05:45.275(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 11(Long)
+2018-07-15 11:05:45.459 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 11:11:23.252 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 11:11:23.305 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, 1(Integer), 2018-07-15 11:11:23.216(Timestamp), 2018-07-15 11:11:23.216(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 11:11:23.307 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 11:11:24.359 [main] DEBUG com.hyz.o2o.util.ImageUtil - current relativeAddr is:upload/item/shop/12/2018071511112357905.jpg
+2018-07-15 11:11:24.359 [main] DEBUG com.hyz.o2o.util.ImageUtil - current completeAddr is:/home/yogi/image/upload/item/shop/12/2018071511112357905.jpg
+2018-07-15 11:11:25.109 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, priority=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 11:11:25.110 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/12/2018071511112357905.jpg(String), 1(Integer), 2018-07-15 11:11:23.216(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 12(Long)
+2018-07-15 11:11:25.112 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 13:18:38.100 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 13:18:38.146 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, 1(Integer), 2018-07-15 13:18:38.069(Timestamp), 2018-07-15 13:18:38.069(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 13:18:38.149 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 13:18:38.171 [main] DEBUG com.hyz.o2o.util.ImageUtil - current relativeAddr is:upload/item/shop/13/2018071513183873800.jpg
+2018-07-15 13:18:38.172 [main] DEBUG com.hyz.o2o.util.ImageUtil - current completeAddr is:/Users/yogi/Document/imageupload/item/shop/13/2018071513183873800.jpg
+2018-07-15 13:18:38.896 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, priority=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 13:18:38.897 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/13/2018071513183873800.jpg(String), 1(Integer), 2018-07-15 13:18:38.069(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 13(Long)
+2018-07-15 13:18:38.899 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 13:19:51.644 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 13:19:51.709 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test1(String), test1(String), test1(String), null, 1(Integer), 2018-07-15 13:19:51.608(Timestamp), 2018-07-15 13:19:51.608(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 13:19:51.712 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 13:19:51.733 [main] DEBUG com.hyz.o2o.util.ImageUtil - current relativeAddr is:upload/item/shop/14/2018071513195188857.jpg
+2018-07-15 13:19:51.733 [main] DEBUG com.hyz.o2o.util.ImageUtil - current completeAddr is:/Users/yogi/Document/imageupload/item/shop/14/2018071513195188857.jpg
+2018-07-15 13:19:52.418 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, priority=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 13:19:52.421 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test1(String), test1(String), test1(String), upload/item/shop/14/2018071513195188857.jpg(String), 1(Integer), 2018-07-15 13:19:51.608(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 14(Long)
+2018-07-15 13:19:52.423 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 13:25:26.887 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 13:25:26.944 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺1(String), test2(String), test2(String), test2(String), null, 1(Integer), 2018-07-15 13:25:26.851(Timestamp), 2018-07-15 13:25:26.851(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 13:25:26.947 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 13:25:26.975 [main] DEBUG com.hyz.o2o.util.ImageUtil - current relativeAddr is:/upload/item/shop/15/2018071513252687624.jpg
+2018-07-15 13:25:26.975 [main] DEBUG com.hyz.o2o.util.ImageUtil - current completeAddr is:/Users/yogi/Document/image/upload/item/shop/15/2018071513252687624.jpg
+2018-07-15 13:25:27.877 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, priority=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 13:25:27.879 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺1(String), test2(String), test2(String), test2(String), /upload/item/shop/15/2018071513252687624.jpg(String), 1(Integer), 2018-07-15 13:25:26.851(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 15(Long)
+2018-07-15 13:25:27.882 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 15:05:38.802 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 15:05:38.851 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺3(String), test3(String), test3(String), test3(String), null, null, 2018-07-15 15:05:38.765(Timestamp), 2018-07-15 15:05:38.765(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 15:05:38.855 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 15:05:38.884 [main] DEBUG com.hyz.o2o.util.ImageUtil - current relativeAddr is:/upload/item/shop/16/2018071515053843652.jpg
+2018-07-15 15:05:38.884 [main] DEBUG com.hyz.o2o.util.ImageUtil - current completeAddr is:/Users/yogi/Document/image/upload/item/shop/16/2018071515053843652.jpg
+2018-07-15 15:05:39.766 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 15:05:39.768 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), /upload/item/shop/16/2018071515053843652.jpg(String), 2018-07-15 15:05:38.765(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 16(Long)
+2018-07-15 15:05:39.771 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-07-15 17:49:03.114 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-07-15 17:49:03.168 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺4(String), test3(String), test3(String), test3(String), null, null, 2018-07-15 17:49:03.095(Timestamp), 2018-07-15 17:49:03.095(Timestamp), 0(Integer), 审核中(String)
+2018-07-15 17:49:03.170 [main] DEBUG com.hyz.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-07-15 17:49:03.196 [main] DEBUG com.hyz.o2o.util.ImageUtil - current relativeAddr is:/upload/item/shop/17/2018071517490378854.jpg
+2018-07-15 17:49:03.197 [main] DEBUG com.hyz.o2o.util.ImageUtil - current completeAddr is:/Users/yogi/Document/image/upload/item/shop/17/2018071517490378854.jpg
+2018-07-15 17:49:03.884 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-07-15 17:49:03.885 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺4(String), test3(String), test3(String), test3(String), /upload/item/shop/17/2018071517490378854.jpg(String), 2018-07-15 17:49:03.095(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 17(Long)
+2018-07-15 17:49:03.887 [main] DEBUG com.hyz.o2o.dao.ShopDao.updateShop - <==    Updates: 1
