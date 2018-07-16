@@ -3,7 +3,9 @@ package com.hyz.o2o.dao;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
+import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +20,15 @@ public class AreaDaoTest extends BaseTest {
 	@Autowired
 	private AreaDao areaDao;
 
-//	@Test
-//	public void testQueryArea() {
-//		List<Area> areaList = areaDao.queryArea();
-//		assertEquals(2, areaList.size());
-//		
-//	}
+	@Test
+	public void testQueryArea() {
+		List<Area> areaList = areaDao.queryArea();
+		assertEquals(3, areaList.size());
+		
+	}
 
 	@Test
+	@Ignore
 	public void tesstInsertArea() {
 		Logger logger = (Logger) LoggerFactory.getLogger(AreaController.class);
 		Area area = new Area();

@@ -1,7 +1,9 @@
 package com.hyz.o2o.web.shopadmin;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,11 +19,16 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hyz.o2o.dto.ShopExecution;
+import com.hyz.o2o.entity.Area;
 import com.hyz.o2o.entity.PersonInfo;
 import com.hyz.o2o.entity.Shop;
+import com.hyz.o2o.entity.ShopCategory;
 import com.hyz.o2o.enums.ShopStateEnum;
 import com.hyz.o2o.exceptions.ShopOperationException;
+import com.hyz.o2o.service.AreaService;
+import com.hyz.o2o.service.ShopCategoryService;
 import com.hyz.o2o.service.ShopService;
+import com.hyz.o2o.util.CodeUtil;
 import com.hyz.o2o.util.HttpServletRequestUtil;
 
 @Controller
@@ -30,10 +37,40 @@ public class ShopManagementController {
 	@Autowired
 	private ShopService shopService;
 
+	@Autowired
+	private ShopCategoryService shopCategoryService;
+
+	@Autowired
+	private AreaService areaService;
+
+	@RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String, Object> getShopInitInfo() {
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		List<ShopCategory> shopCategoryList = new ArrayList<ShopCategory>();
+		List<Area> areaList = new ArrayList<Area>();
+		try {
+			shopCategoryList = shopCategoryService.getShopCategoryList(new ShopCategory());
+			areaList = areaService.getAreaList();
+			modelMap.put("shopCategoryList", shopCategoryList);
+			modelMap.put("areaList", areaList);
+			modelMap.put("success", true);
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.getMessage());
+		}
+		return modelMap;
+	}
+
 	@RequestMapping(value = "/registershop", method = RequestMethod.POST)
 	@ResponseBody
 	private Map<String, Object> regiseterShop(HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
+		if (!CodeUtil.checkVerifyCode(request)) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "输入错误的验证码");
+			return modelMap;
+		}
 
 		String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
 
