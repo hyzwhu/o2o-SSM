@@ -84,4 +84,17 @@ public class ImageUtil {
 				.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
 				.outputQuality(0.8f).toFile("/Users/yogi/Documents/hyz-doc/image/t016122ec45c5fdc5fanew.jpg");
 	}
+
+	public static void deleteFileOrPath(String storePath) {
+		File fileOrPath = new File(PathUtil.getImgBasePath() + storePath);
+		if (fileOrPath.exists()) {
+			if (fileOrPath.isDirectory()) {
+				File files[] = fileOrPath.listFiles();
+				for (File file : files) {
+					file.delete();
+				}
+			}
+			fileOrPath.delete();
+		}
+	}
 }

@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Date;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,12 +19,36 @@ import com.hyz.o2o.entity.PersonInfo;
 import com.hyz.o2o.entity.Shop;
 import com.hyz.o2o.entity.ShopCategory;
 import com.hyz.o2o.enums.ShopStateEnum;
+import com.hyz.o2o.exceptions.ShopOperationException;
 
 public class ShopServiceTest extends BaseTest {
 	@Autowired
 	private ShopService shopService;
 
 	@Test
+	public void testQueryShopList() {
+		Shop shopCondition = new Shop();
+		ShopCategory shopCategory = new ShopCategory();
+		shopCategory.setShopCategoryId(2l);
+		shopCondition.setShopCategory(shopCategory);
+		ShopExecution se = shopService.getShopList(shopCondition, 1, 2);
+		System.out.println("店铺分页操作后总数为:" + se.getShopList().size());
+		System.out.println("店铺总数为：" + se.getCount());
+	}
+
+	@Test
+	@Ignore
+	public void testModifyShopId() throws ShopOperationException, FileNotFoundException {
+		Shop shop = shopService.getByShopId(20L);
+		shop.setShopName("修改后的店铺名称");
+		File shopImg = new File("/Users/yogi/Documents/hyz-doc/image/t016c3e238261049d91.jpg");
+		InputStream is = new FileInputStream(shopImg);
+		ShopExecution shopExecution = shopService.modifyShop(shop, is, "t016c3e238261049d91.jpg");
+		System.out.println("新的图片地址:" + shopExecution.getShop().getShopImg());
+	}
+
+	@Test
+	@Ignore
 	public void testAddShop() throws FileNotFoundException {
 		Shop shop = new Shop();
 		PersonInfo owner = new PersonInfo();

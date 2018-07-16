@@ -7,5 +7,20 @@ import com.hyz.o2o.entity.Shop;
 import com.hyz.o2o.exceptions.ShopOperationException;
 
 public interface ShopService {
-	ShopExecution addShop(Shop shop,InputStream shopImgInputStream,String fileName) throws ShopOperationException;
+	
+	 /**
+	  * 根据shopConditin分页返回相应列表数据
+	  * @param shopCondition
+	  * @param pageIndex
+	  * @param pageSize
+	  * @return
+	  */
+	ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize);
+
+	Shop getByShopId(long shopId);
+
+	ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+
+	ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+
 }

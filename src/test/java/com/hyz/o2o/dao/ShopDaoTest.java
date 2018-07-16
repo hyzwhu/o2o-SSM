@@ -3,6 +3,7 @@ package com.hyz.o2o.dao;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -15,11 +16,46 @@ import com.hyz.o2o.entity.Area;
 import com.hyz.o2o.entity.PersonInfo;
 import com.hyz.o2o.entity.Shop;
 import com.hyz.o2o.entity.ShopCategory;
+import com.hyz.o2o.exceptions.ShopOperationException;
 import com.hyz.o2o.web.superadmin.AreaController;
 
 public class ShopDaoTest extends BaseTest {
 	@Autowired
 	private ShopDao shopDao;
+
+	/**
+	 * 
+	 */
+	@Test
+	public void testQueryShopLisst() {
+		Shop shopCondition = new Shop();
+		PersonInfo owner = new PersonInfo();
+		owner.setUserId(1L);
+		shopCondition.setOwner(owner);
+
+		int effectedNum = shopDao.queryShopCount(shopCondition);
+		System.out.println("店铺总数:" + effectedNum);
+
+		List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 5);
+		System.out.println(shopList.size());
+
+		ShopCategory shopCategory = new ShopCategory();
+		shopCategory.setShopCategoryId(2L);
+		shopCondition.setShopCategory(shopCategory);
+		shopList = shopDao.queryShopList(shopCondition, 0, 2);
+		System.out.println("条件查询数量为:" + shopList.size());
+		int count = shopDao.queryShopCount(shopCondition);
+		System.out.println("总个数为" + count);
+	}
+
+	@Test
+	@Ignore
+	public void testQueryShop() {
+		long shopId = 2;
+		Shop shop = shopDao.queryByShopId(shopId);
+		System.out.println("AreaId:" + shop.getArea().getAreaId());
+		System.out.println("AreaName:" + shop.getArea().getAreaName());
+	}
 
 	@Test
 	@Ignore
@@ -53,6 +89,7 @@ public class ShopDaoTest extends BaseTest {
 	}
 
 	@Test
+	@Ignore
 	public void testUpdateShop() {
 		Shop shop = new Shop();
 		shop.setShopId(5L);
