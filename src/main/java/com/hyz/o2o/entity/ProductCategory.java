@@ -3,18 +3,18 @@ package com.hyz.o2o.entity;
 import java.util.Date;
 
 public class ProductCategory {
-	private Long productCategory;
+	private Long productCategoryId;
 	private Long shopId;
 	private String productCategoryName;
 	private Integer priority;
 	private Date createTime;
 
-	public Long getProductCategory() {
-		return productCategory;
+	public Long getProductCategoryId() {
+		return productCategoryId;
 	}
 
-	public void setProductCategory(Long productCategory) {
-		this.productCategory = productCategory;
+	public void setProductCategoryId(Long productCategoryId) {
+		this.productCategoryId = productCategoryId;
 	}
 
 	public Long getShopId() {

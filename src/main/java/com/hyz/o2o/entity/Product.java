@@ -12,7 +12,7 @@ public class Product {
 	private String normalPrice;
 	private String promotionPrice;
 	private Integer priority;
-	private Date creaTime;
+	private Date createTime;
 	private Date lastEditTime;
 	private Integer enableStatus;
 
@@ -76,14 +76,6 @@ public class Product {
 		this.priority = priority;
 	}
 
-	public Date getCreaTime() {
-		return creaTime;
-	}
-
-	public void setCreaTime(Date creaTime) {
-		this.creaTime = creaTime;
-	}
-
 	public Date getLastEditTime() {
 		return lastEditTime;
 	}
@@ -123,5 +115,15 @@ public class Product {
 	public void setShop(Shop shop) {
 		this.shop = shop;
 	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	
+	
 
 }

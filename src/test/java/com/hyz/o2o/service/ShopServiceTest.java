@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.hyz.o2o.BaseTest;
+import com.hyz.o2o.dto.ImageHolder;
 import com.hyz.o2o.dto.ShopExecution;
 import com.hyz.o2o.entity.Area;
 import com.hyz.o2o.entity.PersonInfo;
@@ -43,7 +44,8 @@ public class ShopServiceTest extends BaseTest {
 		shop.setShopName("修改后的店铺名称");
 		File shopImg = new File("/Users/yogi/Documents/hyz-doc/image/t016c3e238261049d91.jpg");
 		InputStream is = new FileInputStream(shopImg);
-		ShopExecution shopExecution = shopService.modifyShop(shop, is, "t016c3e238261049d91.jpg");
+		ImageHolder imageHolder = new ImageHolder("t016c3e238261049d91.jpg", is);
+		ShopExecution shopExecution = shopService.modifyShop(shop, imageHolder);
 		System.out.println("新的图片地址:" + shopExecution.getShop().getShopImg());
 	}
 
@@ -70,7 +72,8 @@ public class ShopServiceTest extends BaseTest {
 		shop.setAdvice("审核中");
 		File shopImg = new File("/Users/yogi/Documents/hyz-doc/image/t016122ec45c5fdc5fa.jpg");
 		InputStream is = new FileInputStream(shopImg);
-		ShopExecution se = shopService.addShop(shop, is, shopImg.getName());
+		ImageHolder imageHolder = new ImageHolder("/Users/yogi/Documents/hyz-doc/image/t016122ec45c5fdc5fa.jpg", is);
+		ShopExecution se = shopService.addShop(shop, imageHolder);
 		assertEquals(ShopStateEnum.CHECK.getState(), se.getState());
 
 	}
